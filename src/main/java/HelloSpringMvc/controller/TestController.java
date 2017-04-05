@@ -24,6 +24,6 @@ public class TestController
     @ResponseBody       //用于返回字符串,不写即返回视图
     public String returnString() {
 
-        return "hello return string 这是中文，并没有乱码";
+        return "hello return string 这是中文，并没有乱码";;;
     }
 }
