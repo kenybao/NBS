@@ -23,7 +23,8 @@ public class TestController
     //produces用于解决返回中文乱码问题，application/json;为json解决中文乱码
     @ResponseBody       //用于返回字符串,不写即返回视图
     public String returnString() {
+//        ss
+        return "hello return string 这是中文，并没有乱码";
 
-        return "hello return string 这是中文，并没有乱码";;;
     }
 }
