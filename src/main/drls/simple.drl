@@ -1,0 +1,7 @@
+
+dialect  "mvel"
+
+rule "simple"
+    when
+    then
+end
