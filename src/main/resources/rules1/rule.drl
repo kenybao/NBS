@@ -1,0 +1,28 @@
+package rules1
+
+//导入自定义的实体类
+import entity.Message
+
+//规则名
+rule "ksession-rules"
+    //条件语句
+    when
+        //当该实体的status属性为HELLO的时候，将该实体赋值给m，实体的message属性赋值给printMsg
+        m : Message( status == Message.HELLO, printMsg : message )
+    //满足条件之后要做的事情
+    then
+        //系统输出和重新设置实体属性
+        System.out.println( printMsg );
+        m.setMessage( "Goodbye~" );
+        m.setStatus( Message.GOODBYE );
+        //更新实体，会重新触发规则
+        update( m );
+end
+
+//第二个规则
+rule "GoodBye"
+    when
+        Message( status == Message.GOODBYE, printMsg : message )
+    then
+        System.out.println( printMsg );
+end
