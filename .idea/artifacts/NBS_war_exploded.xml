@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="NBS:war exploded">
-    <output-path>$PROJECT_DIR$/target/NBS</output-path>
+    <output-path>D:/devWare/apache-tomcat-7.0.81/webapps</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
