@@ -9,8 +9,9 @@ import org.springframework.stereotype.Service;
  */
 public interface UserInfoService {
     /**
-     * dubbo接口测试 获取用户信息
+     * dubbo接口测试 获取用户信息master
      * @return
      */
      String getUserInfo();
+
 }
