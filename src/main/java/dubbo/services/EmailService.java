@@ -5,5 +5,10 @@ package main.java.dubbo.services;
  * @Date 2017/12/4 0004.
  * @Time 16:58.
  */
-public class EmailService {
+public interface EmailService {
+    /**
+     * get email
+     * @return
+     */
+    String getEmail(String userName);
 }

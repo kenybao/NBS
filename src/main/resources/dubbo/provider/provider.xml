@@ -5,7 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans        http://www.springframework.org/schema/beans/spring-beans.xsd        http://code.alibabatech.com/schema/dubbo        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
     <!-- 提供方应用信息，用于计算依赖关系 -->
-    <dubbo:application name="hello-world-app"  />
+    <dubbo:application name="cif-provider"  />
 
     <!-- 使用multicast广播注册中心暴露服务地址 -->
     <dubbo:registry address="zookeeper://18.216.110.232:2181" />
@@ -14,8 +14,8 @@
     <dubbo:protocol name="dubbo" port="20880" />
 
     <!-- 声明需要暴露的服务接口 -->
-    <dubbo:service interface="dubbo.services.UserInfoService" ref="UserInfoService" />
+    <dubbo:service interface="main.java.dubbo.services.UserInfoService" ref="userInfoService" />
 
     <!-- 和本地bean一样实现服务 -->
-    <bean id="UserInfoService" class="dubbo.servicesImpl.UserInfoServiceImpl" />
+    <bean id="userInfoService"   class="main.java.dubbo.services.impl.UserInfoServiceImpl" />
 </beans>

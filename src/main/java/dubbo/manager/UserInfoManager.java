@@ -6,4 +6,9 @@ package main.java.dubbo.manager;
  * @Time 19:33.
  */
 public interface UserInfoManager {
+    /**
+     * 本地接口 获取用户信息
+     * @return
+     */
+    String getUserInfo();
 }

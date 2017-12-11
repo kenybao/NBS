@@ -1,4 +1,4 @@
-package dubbo.consumer;
+package main.java.dubbo.consumer;
 
 import main.java.dubbo.services.UserInfoService;
 import org.slf4j.Logger;
@@ -17,7 +17,7 @@ public class Consumer {
     public static UserInfoService userInfoService;
     public static void main(String[] args) throws Exception {
         logger.error("Consumer  start-------------------------------------- start");
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[] {"/main/resources/dubbo/consumer/consumer.xml"});
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[] {"/dubbo/consumer/consumer.xml"});
         context.start();
         // 获取远程服务代理
 //        UserInfoService userInfoService = (UserInfoService)context.getBean("UserInfoService");
