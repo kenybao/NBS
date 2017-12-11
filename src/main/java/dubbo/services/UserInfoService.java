@@ -12,5 +12,5 @@ public interface UserInfoService {
      * dubbo接口测试 获取用户信息
      * @return
      */
-     String getUserInfo();
+     String getUserInfo();;;
 }
